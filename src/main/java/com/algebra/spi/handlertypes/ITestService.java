@@ -1,4 +1,4 @@
-package com.algebra.spi.service;
+package com.algebra.spi.handlertypes;
 
 /**
  * @projectName: spidemo

@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebListener;
  * @version: 1.0
  */
 @WebListener
-public class MyListener implements ServletContextListener {
+public class AlgebraListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {

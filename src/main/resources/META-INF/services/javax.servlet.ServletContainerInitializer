@@ -1,1 +1,2 @@
 com.algebra.spi.initializer.MyServletContainerInitializer
+org.springframework.web.SpringServletContainerInitializer

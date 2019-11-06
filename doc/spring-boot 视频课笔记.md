@@ -2,7 +2,7 @@
 
 `WEB`三大组件：`servlet、filter、listener`
 
-1.原生`J2EE`中`web.xml` 中`servlet`标签配置 --->> `spring-mvc.xml`
+1.配置途径：原生`J2EE`中`web.xml` 中`servlet`标签配置 --->> `spring-mvc.xml`
 
 2.非配置途径：`@WebServlet(value={"/hello","/world"})`注解一个继承`HttpServlet`的类，并重写`doGet` 或者 `doPost`方法，同理`@WebFilter() / @WebListener()`
 
@@ -48,6 +48,28 @@ public class MyServletContainerInitializer implements ServletContainerInitialize
 附件2：`spring.io  --> spring-framework --> spring MVC` 官网说明
 
 >  https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html 
+
+
+
+去除`web.xml`
+
+
+
+```java
+tomcat.onstart() {
+	SpringServletContainerInitializer.onStartup(WebApplicationInitializer 集合) {
+		// 通过反射创建 WebApplicationInitializer 对象
+		WebApplicationInitializer.onStartup() {
+			// 1.创建IOC容器
+			// 2.注册我们的dispatchServlet
+		}
+	}
+}
+```
+
+
+
+
 
 
 

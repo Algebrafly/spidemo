@@ -11,8 +11,8 @@ import java.io.IOException;
  * @date: 2019/11/4 22:07
  * @version: 1.0
  */
-@WebFilter(value = "/helloAlgebra2")
-public class MyFilter implements Filter {
+@WebFilter(value = "/helloAlgebra")
+public class AlgebraFilter implements Filter {
 
 
     @Override

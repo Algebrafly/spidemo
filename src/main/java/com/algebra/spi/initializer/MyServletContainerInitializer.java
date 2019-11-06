@@ -2,7 +2,7 @@ package com.algebra.spi.initializer;
 
 import com.algebra.spi.filter.MyFilter;
 import com.algebra.spi.listener.MyListener;
-import com.algebra.spi.service.ITestService;
+import com.algebra.spi.handlertypes.ITestService;
 import com.algebra.spi.servlet.MyServlet;
 
 import javax.servlet.*;
@@ -20,7 +20,9 @@ public class MyServletContainerInitializer implements ServletContainerInitialize
         List<ITestService> testServices = new ArrayList<>();
         if(set != null){
             for (Class<?> aClass : set) {
-                if(!aClass.isInterface() && !Modifier.isAbstract(aClass.getModifiers())){
+                if(!aClass.isInterface()
+                        && !Modifier.isAbstract(aClass.getModifiers())
+                        && ITestService.class.isAssignableFrom(aClass)){
                     try {
                         testServices.add((ITestService) aClass.newInstance());
                     } catch (InstantiationException | IllegalAccessException e) {
@@ -34,10 +36,10 @@ public class MyServletContainerInitializer implements ServletContainerInitialize
         }
         servletContext.addListener(MyListener.class);
 
-        ServletRegistration.Dynamic servletRegistration = servletContext.addServlet("", MyServlet.class);
+        ServletRegistration.Dynamic servletRegistration = servletContext.addServlet("myServlet", new MyServlet());
+        servletRegistration.addMapping("/myServlet");
 
-        FilterRegistration.Dynamic filterRegistration = servletContext.addFilter("", MyFilter.class);
-
+        FilterRegistration.Dynamic filterRegistration = servletContext.addFilter("/helloServlet", MyFilter.class);
         filterRegistration.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST),true,"/*");
     }
 }
