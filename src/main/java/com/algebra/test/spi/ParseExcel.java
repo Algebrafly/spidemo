@@ -1,4 +1,4 @@
-package com.algebra.test;
+package com.algebra.test.spi;
 
 /**
  * @projectName: spidemo
