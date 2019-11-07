@@ -28,6 +28,7 @@ public class OperateContext {
         map.put("vip-spring",new VipSpringStrategy());
         map.put("normal",new NormalStategy());
         map.put("normal-spring",new NormalSpringStrategy());
+        // ... ...
     }
 
     public static Strategy getStrategy(String key) throws Exception {
