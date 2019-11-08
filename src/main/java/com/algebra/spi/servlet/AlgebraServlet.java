@@ -14,7 +14,7 @@ import java.io.IOException;
  * @date: 2019/11/6 21:19
  * @version: 1.0
  */
-@WebServlet(value = {"/helloAlgebra"})
+@WebServlet(value = {"/hello"})
 public class AlgebraServlet extends HttpServlet {
 
     @Override

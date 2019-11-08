@@ -39,7 +39,7 @@ public class MyServletContainerInitializer implements ServletContainerInitialize
         ServletRegistration.Dynamic servletRegistration = servletContext.addServlet("myServlet", new MyServlet());
         servletRegistration.addMapping("/myServlet");
 
-        FilterRegistration.Dynamic filterRegistration = servletContext.addFilter("/helloServlet", MyFilter.class);
-        filterRegistration.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST),true,"/*");
+        FilterRegistration.Dynamic filterRegistration = servletContext.addFilter("myFilter", MyFilter.class);
+        filterRegistration.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST),true,"/myServlet");
     }
 }

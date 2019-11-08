@@ -11,7 +11,7 @@ import java.io.IOException;
  * @date: 2019/11/4 22:07
  * @version: 1.0
  */
-@WebFilter(urlPatterns = {"/helloAlgebra2"},filterName = "AlgebraFilter")
+@WebFilter(urlPatterns = {"/hello"},filterName = "algebraFilter")
 public class AlgebraFilter implements Filter {
 
 
