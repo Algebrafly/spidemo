@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * @projectName: spidemo
  * @author: Algebra
- * @description: api-测试servlet
+ * @description: api-测试servlet(SPI方式)
  * @date: 2019/11/4 22:26
  * @version: 1.0
  */

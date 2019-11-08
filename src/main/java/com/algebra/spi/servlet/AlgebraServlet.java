@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * @projectName: spidemo
  * @author: Algebra
- * @description: 原生J2EE-web项目配置
+ * @description: 原生J2EE-web项目配置(纯注解方式)
  * @date: 2019/11/6 21:19
  * @version: 1.0
  */

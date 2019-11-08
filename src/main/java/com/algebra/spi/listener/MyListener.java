@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebListener;
 /**
  * @projectName: spidemo
  * @author: Algebra
- * @description: spi-自定义监听器
+ * @description: spi-自定义监听器(SPI方式的监听器)
  * @date: 2019/11/4 22:08
  * @version: 1.0
  */

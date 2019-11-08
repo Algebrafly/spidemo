@@ -13,6 +13,11 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * @date today
+ * @author al
+ * @desc SPI模拟servlet容器启动
+ */
 @HandlesTypes(value = {ITestService.class})
 public class MyServletContainerInitializer implements ServletContainerInitializer {
     @Override

@@ -3,7 +3,7 @@ package com.algebra.spi.handlertypes;
 /**
  * @projectName: spidemo
  * @author: Algebra
- * @description: 这是一个测试接口服务
+ * @description: 这是一个测试接口服务（模拟servlet容器启动时候要加载的服务）
  * @date: 2019/11/4 22:11
  * @version: 1.0
  */

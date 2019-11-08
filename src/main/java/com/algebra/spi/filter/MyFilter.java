@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * @projectName: spidemo
  * @author: Algebra
- * @description: spi-自定义过滤器
+ * @description: spi-自定义过滤器(SPI方式过滤器)
  * @date: 2019/11/4 22:07
  * @version: 1.0
  */
